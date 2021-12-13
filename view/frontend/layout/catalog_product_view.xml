@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="kingfisherdirect_googletagmanager.datalayer">
+            <block class="KingfisherDirect\GoogleTagManager\Block\ProductDataLayer" name="kingfisherdirect_googletagmanager.datalayer.product" />
+        </referenceBlock>
+
+        <referenceBlock name="content">
+            <block name="kingfisherdirect_googletagmanager.datalayer.add_to_cart" class="KingfisherDirect\GoogleTagManager\Block\AddToCartDataLayer" template="KingfisherDirect_GoogleTagManager::add-to-cart.phtml" after="-" />
+        </referenceBlock>
+    </body>
+</page>

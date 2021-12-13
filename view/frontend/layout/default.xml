@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="head.additional">
+            <block class="KingfisherDirect\GoogleTagManager\Block\DataLayer" name="kingfisherdirect_googletagmanager.datalayer" template="KingfisherDirect_GoogleTagManager::script.phtml">
+                <arguments>
+                    <argument name="data" xsi:type="array">
+                        <!-- 12 hours -->
+                        <item name="cache_lifetime" xsi:type="number">43200</item>
+                    </argument>
+                </arguments>
+                <block class="KingfisherDirect\GoogleTagManager\Block\DefaultDataLayer" name="kingfisherdirect_googletagmanager.datalayer.default" />
+            </block>
+        </referenceBlock>
+
+        <referenceContainer name="after.body.start">
+            <block class="KingfisherDirect\GoogleTagManager\Block\Block" name="kingfisherdirect_googletagmanager_iframe" template="KingfisherDirect_GoogleTagManager::iframe.phtml">
+                <arguments>
+                    <argument name="data" xsi:type="array">
+                        <!-- 12 hours -->
+                        <item name="cache_lifetime" xsi:type="number">43200</item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

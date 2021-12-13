@@ -1,0 +1,6 @@
+<?php
+/** @var $block \KingfisherDirect\GoogleTagManager\Block\Block */
+$containerId = $block->getConfiguration()->getContainerId();
+?>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?= $containerId; ?>"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

@@ -1,0 +1,21 @@
+{
+    "name": "kingfisherdirect/magento2-google-tag-manager",
+    "description": "Google Tag Manager extension for Magento 2",
+    "type": "magento2-module",
+    "license": "MIT",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "KingfisherDirect\\GoogleTagManager\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Kamil",
+            "email": "kamil@kingfisheridrect.co.uk"
+        }
+    ],
+    "require": {}
+}

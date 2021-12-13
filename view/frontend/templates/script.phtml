@@ -1,0 +1,21 @@
+<?php
+/** @var $block \KingfisherDirect\GoogleTagManager\Block\DataLayer */
+
+$containerId = $block->getConfiguration()->getContainerId();
+$pushData = $block->getPushesSerialized();
+?>
+
+<script type="text/javascript">
+(function(w, dl) {
+    w.dataLayerName = dl
+    w[dl] = w[dl] || [];
+    w[dl].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+    })
+    var p = JSON.parse('<?= $pushData; ?>')
+    p.forEach(function (d) { w[dl].push(d) })
+})(window, "dataLayer")
+</script>
+
+<script async src="https://www.googletagmanager.com/gtm.js?id=<?= /* @noEscape */ $containerId; ?>"></script>
