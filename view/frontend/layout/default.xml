@@ -5,10 +5,8 @@
         <referenceBlock name="head.additional">
             <block class="KingfisherDirect\GoogleTagManager\Block\DataLayer" name="kingfisherdirect_googletagmanager.datalayer" template="KingfisherDirect_GoogleTagManager::script.phtml">
                 <arguments>
-                    <argument name="data" xsi:type="array">
-                        <!-- 12 hours -->
-                        <item name="cache_lifetime" xsi:type="number">43200</item>
-                    </argument>
+                    <!-- 12 hours -->
+                    <argument name="cache_lifetime" xsi:type="number">43200</argument>
                 </arguments>
                 <block class="KingfisherDirect\GoogleTagManager\Block\DefaultDataLayer" name="kingfisherdirect_googletagmanager.datalayer.default" />
             </block>
@@ -17,10 +15,8 @@
         <referenceContainer name="after.body.start">
             <block class="KingfisherDirect\GoogleTagManager\Block\Block" name="kingfisherdirect_googletagmanager_iframe" template="KingfisherDirect_GoogleTagManager::iframe.phtml">
                 <arguments>
-                    <argument name="data" xsi:type="array">
-                        <!-- 12 hours -->
-                        <item name="cache_lifetime" xsi:type="number">43200</item>
-                    </argument>
+                    <!-- 12 hours -->
+                    <argument name="cache_lifetime" xsi:type="number">43200</argument>
                 </arguments>
             </block>
         </referenceContainer>

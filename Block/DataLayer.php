@@ -41,8 +41,11 @@ class DataLayer extends Block
         return $this;
     }
 
-    protected function getCacheLifetime()
+    public function getCacheKeyInfo()
     {
-        return 3600;
+        $cacheInfo = parent::getCacheKeyInfo();
+        $cacheInfo["action_name"] = $this->_request->getFullActionName();
+
+        return $cacheInfo;
     }
 }
