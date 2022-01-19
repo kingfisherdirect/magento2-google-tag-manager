@@ -4,9 +4,7 @@
     <body>
         <referenceBlock name="kingfisherdirect_googletagmanager.datalayer">
             <arguments>
-                <argument name="data" xsi:type="array">
-                    <item name="cache_lifetime" xsi:type="number">0</item>
-                </argument>
+                <argument name="cache_lifetime" xsi:type="null" />
             </arguments>
             <block class="KingfisherDirect\GoogleTagManager\Block\SearchDataLayer" name="kingfisherdirect_googletagmanager.datalayer.search" />
         </referenceBlock>
